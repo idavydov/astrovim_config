@@ -7,6 +7,12 @@ return {
     spell = false, -- sets vim.opt.spell
     signcolumn = "auto", -- sets vim.opt.signcolumn to auto
     wrap = false, -- sets vim.opt.wrap
+    colorcolumn = "80,100,120",
+
+    expandtab = true,
+    shiftwidth = 2,
+    tabstop = 2,
+    softtabstop = 2,
   },
   g = {
     mapleader = " ", -- sets vim.g.mapleader
@@ -17,6 +23,15 @@ return {
     icons_enabled = true, -- disable icons in the UI (disable if no nerd font is available, requires :PackerSync after changing)
     ui_notifications_enabled = true, -- disable notifications when toggling UI elements
     resession_enabled = false, -- enable experimental resession.nvim session management (will be default in AstroNvim v4)
+    -- nvim-r
+    R_assign = 1,
+    R_nvimpager = "tab",
+    R_assign_map = "<M-->",
+    R_close_term = 1,
+    R_openhtml = 0,
+    R_args = { "--quiet", "--no-save", "--no-restore" },
+
+    r_indent_align_args = 0,
   },
 }
 -- If you need more control, you can use the function()...end notation
