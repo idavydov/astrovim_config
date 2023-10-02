@@ -1,15 +1,5 @@
 return {
   {
-    "jalvesaq/Nvim-R",
-    ft = { "r", "rmd", "rdoc", "quarto" },
-    keys = {
-      {
-        "<LocalLeader>pr",
-        '<cmd>call g:SendCmdToR(\'params <- lapply(knitr::knit_params(readLines("\' . expand("%") . \'")), function(x) x$value); class(params) <- "knit_param_list"\')<CR>',
-      },
-    },
-  },
-  {
     "rcarriga/nvim-notify",
     enabled = false,
   },
