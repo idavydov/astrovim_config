@@ -57,7 +57,7 @@ return {
     vim.g.rout_color_inf = "guifg=#188092"
     vim.g.rout_color_constant = "guifg=#188092"
     vim.g.rout_color_string = "guifg=#587539"
-    vim.g.rout_color_error = "guifg=#ffffff guibg=#c64343"
+    vim.g.rout_color_error = "guifg=#e9e9ec guibg=#c64343"
     vim.g.rout_color_warn = "guifg=#c64343"
     vim.g.rout_color_index = "guifg=#9854f1"
   end,
