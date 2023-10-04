@@ -8,6 +8,26 @@ return {
       desc = "read params from the YAML header",
     },
     {
+      "<LocalLeader>pb",
+      "<cmd>call g:SendCmdToR('pkgdown::build_site()')<CR>",
+      desc = "pkgdown build site",
+    },
+    {
+      "<LocalLeader>dl",
+      "<cmd>call g:SendCmdToR('devtools::load_all()')<CR>",
+      desc = "devtools load all",
+    },
+    {
+      "<LocalLeader>dd",
+      "<cmd>call g:SendCmdToR('devtools::document()')<CR>",
+      desc = "devtools document",
+    },
+    {
+      "<LocalLeader>di",
+      "<cmd>call g:SendCmdToR('devtools::install()')<CR>",
+      desc = "devtools install",
+    },
+    {
       "<LocalLeader>au",
       "<cmd>call g:SendCmdToR('arvupload::arv_upload_report(\"' . expand(\"%\") . '\");')<CR>",
       desc = "upload report to Arvados",
