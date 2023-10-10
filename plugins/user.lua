@@ -11,7 +11,7 @@ return {
           file_ignore_patterns = {
             "renv/library",
             ".Rproj.user",
-            ".git",
+            ".git/",
           },
         },
       }
