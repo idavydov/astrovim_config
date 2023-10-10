@@ -29,6 +29,15 @@ return {
     end,
     event = "VeryLazy",
   },
+  {
+    "NeogitOrg/neogit",
+    dependencies = {
+      { "nvim-lua/plenary.nvim" },
+    },
+    event = "User AstroGitFile",
+    cmd = "Neogit",
+    config = true,
+  },
   -- { "aerial.nvim", enabled = false },
   -- { "alpha-nvim", enabled = false },
   -- { "astrotheme", enabled = false },
