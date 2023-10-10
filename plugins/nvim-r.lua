@@ -13,17 +13,17 @@ return {
       desc = "pkgdown build site",
     },
     {
-      "<LocalLeader>dl",
+      "<LocalLeader>el",
       "<cmd>call g:SendCmdToR('devtools::load_all()')<CR>",
       desc = "devtools load all",
     },
     {
-      "<LocalLeader>dd",
+      "<LocalLeader>ed",
       "<cmd>call g:SendCmdToR('devtools::document()')<CR>",
       desc = "devtools document",
     },
     {
-      "<LocalLeader>di",
+      "<LocalLeader>ei",
       "<cmd>call g:SendCmdToR('devtools::install()')<CR>",
       desc = "devtools install",
     },
