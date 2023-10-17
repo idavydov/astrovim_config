@@ -38,6 +38,15 @@ return {
     cmd = "Neogit",
     config = true,
   },
+  {
+    "akinsho/toggleterm.nvim",
+    opts = {
+      on_open = function(term) vim.api.nvim_del_keymap("t", "<C-j>") end,
+      on_close = function(term)
+        vim.api.nvim_set_keymap("t", "<C-j>", "<Cmd>wincmd j<CR>", { desc = "Terminal down window navigation" })
+      end,
+    },
+  },
   -- { "aerial.nvim", enabled = false },
   -- { "alpha-nvim", enabled = false },
   -- { "astrotheme", enabled = false },
