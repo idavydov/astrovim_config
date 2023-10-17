@@ -39,4 +39,7 @@ return {
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
   },
+  i = {
+    ["<C-s>"] = { "<esc>:w<cr>", desc = "Save File" },
+  },
 }
