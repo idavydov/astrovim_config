@@ -4,6 +4,10 @@ return {
     enabled = false,
   },
   {
+    "windowp/nvim-autopairs",
+    enabled = false,
+  },
+  {
     "nvim-telescope/telescope.nvim",
     config = function()
       require("telescope").setup {
