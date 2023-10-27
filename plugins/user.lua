@@ -4,7 +4,7 @@ return {
     enabled = false,
   },
   {
-    "windowp/nvim-autopairs",
+    "windwp/nvim-autopairs",
     enabled = false,
   },
   {
