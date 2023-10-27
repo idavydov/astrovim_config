@@ -32,6 +32,46 @@ return {
       "<cmd>call g:SendCmdToR('arvupload::arv_upload_report(\"' . expand(\"%\") . '\");')<CR>",
       desc = "upload report to Arvados",
     },
+    {
+      "<LocalLeader>in",
+      "<cmd>call RAction('length')<CR>",
+      desc = "length",
+    },
+    {
+      "<LocalLeader>il",
+      "<cmd>call RAction('levels')<CR>",
+      desc = "levels",
+    },
+    {
+      "<LocalLeader>iu",
+      "<cmd>call RAction('unique')<CR>",
+      desc = "unique",
+    },
+    {
+      "<LocalLeader>ir",
+      "<cmd>call RAction('nrow')<CR>",
+      desc = "nrow",
+    },
+    {
+      "<LocalLeader>ig",
+      "<cmd>call RAction('dplyr::glimpse')<CR>",
+      desc = "glimpse",
+    },
+    {
+      "<LocalLeader>ic",
+      "<cmd>call RAction('dplyr::count', ', ' . input('column(s)?'))<CR>",
+      desc = "count",
+    },
+    {
+      "<LocalLeader>id",
+      "<cmd>call RAction('dplyr::distinct', ', ' . input('column(s)?'))<CR>",
+      desc = "distinct",
+    },
+    {
+      "<LocalLeader>ip",
+      "<cmd>call RAction('dplyr::pull', ', ' . input('column?'))<CR>",
+      desc = "pull",
+    },
   },
   init = function()
     vim.g.R_assign = 1
