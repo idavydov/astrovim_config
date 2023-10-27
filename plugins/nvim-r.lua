@@ -2,11 +2,18 @@ return {
   "jalvesaq/Nvim-R",
   ft = { "r", "rmd", "rdoc", "quarto" },
   keys = {
+    -- rmd
     {
       "<LocalLeader>pr",
       '<cmd>call g:SendCmdToR(\'params <- lapply(knitr::knit_params(readLines("\' . expand("%") . \'")), function(x) x$value); class(params) <- "knit_param_list"\')<CR>',
       desc = "read params from the YAML header",
     },
+    {
+      "<LocalLeader>au",
+      "<cmd>call g:SendCmdToR('arvupload::arv_upload_report(\"' . expand(\"%\") . '\");')<CR>",
+      desc = "upload report to Arvados",
+    },
+    -- pkg dev
     {
       "<LocalLeader>pb",
       "<cmd>call g:SendCmdToR('pkgdown::build_site()')<CR>",
@@ -27,11 +34,7 @@ return {
       "<cmd>call g:SendCmdToR('devtools::install()')<CR>",
       desc = "devtools install",
     },
-    {
-      "<LocalLeader>au",
-      "<cmd>call g:SendCmdToR('arvupload::arv_upload_report(\"' . expand(\"%\") . '\");')<CR>",
-      desc = "upload report to Arvados",
-    },
+    -- object properties
     {
       "<LocalLeader>in",
       "<cmd>call RAction('length')<CR>",
@@ -47,6 +50,7 @@ return {
       "<cmd>call RAction('unique')<CR>",
       desc = "unique",
     },
+    -- data.frame's
     {
       "<LocalLeader>ir",
       "<cmd>call RAction('nrow')<CR>",
