@@ -38,6 +38,8 @@ return {
   t = {
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
+    ["jj"] = { "<C-\\><C-n>", desc = "Exit Terminal Mode" },
+    ["jk"] = { "<C-\\><C-n>", desc = "Exit Terminal Mode" },
   },
   i = {
     ["<C-s>"] = { "<esc>:w<cr>", desc = "Save File" },
