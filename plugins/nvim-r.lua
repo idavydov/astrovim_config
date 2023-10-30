@@ -86,6 +86,14 @@ return {
       "<cmd>call RAction('dplyr::pull', ', ' . input('column?'))<CR>",
       desc = "pull",
     },
+    {
+      "<LocalLeader>pv",
+      [[
+        <cmd>call SendParagraphToR('silent', 'stay')<CR>
+        <cmd>call g:SendCmdToR('nvimcom:::nvim_viewobj(.Last.value$value)')<CR>
+        ]],
+      desc = "send paragraph and view result",
+    },
   },
   init = function()
     vim.g.R_assign = 1
@@ -94,6 +102,7 @@ return {
     vim.g.R_close_term = 1
     vim.g.R_openhtml = 0
     vim.g.R_args = { "--quiet", "--no-save", "--no-restore" }
+    vim.g.R_csv_app = ':TermExec cmd="vd --theme=light %s && exit"'
 
     vim.g.r_indent_align_args = 0
     -- vim.g.rout_follow_colorscheme = 1
