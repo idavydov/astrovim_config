@@ -13,6 +13,16 @@ return {
       "<cmd>call g:SendCmdToR('arvupload::arv_upload_report(\"' . expand(\"%\") . '\");')<CR>",
       desc = "upload report to Arvados",
     },
+    {
+      "]c",
+      "<cmd>call b:NextRChunk()<CR>",
+      desc = "Next chunk",
+    },
+    {
+      "[c",
+      "<cmd>call b:PreviousRChunk()<CR>",
+      desc = "Previous chunk",
+    },
     -- pkg dev
     {
       "<LocalLeader>pb",
