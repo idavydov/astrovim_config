@@ -17,6 +17,12 @@ return {
             ".Rproj.user",
             ".git/",
           },
+          mappings = {
+            n = {
+              ["jj"] = "close",
+              ["jk"] = "close",
+            },
+          },
         },
       }
     end,
