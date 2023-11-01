@@ -102,7 +102,7 @@ return {
     vim.g.R_close_term = 1
     vim.g.R_openhtml = 0
     vim.g.R_args = { "--quiet", "--no-save", "--no-restore" }
-    vim.g.R_csv_app = ':TermExec cmd="vd --theme=light %s && exit"'
+    vim.g.R_csv_app = ':lua require("astronvim.utils").toggle_term_cmd("vd --theme=light %s")'
 
     vim.g.r_indent_align_args = 0
     -- vim.g.rout_follow_colorscheme = 1
