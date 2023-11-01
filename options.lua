@@ -8,6 +8,7 @@ return {
     signcolumn = "auto", -- sets vim.opt.signcolumn to auto
     wrap = false, -- sets vim.opt.wrap
     colorcolumn = "80,100,120",
+    scrolloff = 5, -- set the number of lines to keep above and below the cursor when scrolling
 
     expandtab = true,
     shiftwidth = 2,
