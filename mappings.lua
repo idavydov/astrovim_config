@@ -40,6 +40,8 @@ return {
     -- ["<esc>"] = false,
     ["jj"] = { "<C-\\><C-n>", desc = "Exit Terminal Mode" },
     ["jk"] = { "<C-\\><C-n>", desc = "Exit Terminal Mode" },
+    ["JJ"] = { "<C-\\><C-n>", desc = "Exit Terminal Mode" },
+    ["JK"] = { "<C-\\><C-n>", desc = "Exit Terminal Mode" },
   },
   i = {
     ["<C-s>"] = { "<esc>:w<cr>", desc = "Save File" },

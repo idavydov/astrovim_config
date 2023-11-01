@@ -21,6 +21,8 @@ return {
             n = {
               ["jj"] = "close",
               ["jk"] = "close",
+              ["JJ"] = "close",
+              ["JK"] = "close",
             },
           },
         },
@@ -55,6 +57,12 @@ return {
       on_close = function(term)
         vim.api.nvim_set_keymap("t", "<C-j>", "<Cmd>wincmd j<CR>", { desc = "Terminal down window navigation" })
       end,
+    },
+  },
+  {
+    "max397574/better-escape.nvim",
+    opts = {
+      mapping = { "jk", "jj", "JK", "JJ" },
     },
   },
   -- { "aerial.nvim", enabled = false },
