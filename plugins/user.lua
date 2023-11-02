@@ -1,8 +1,8 @@
 return {
-  {
-    "rcarriga/nvim-notify",
-    enabled = false,
-  },
+  -- {
+  --   "rcarriga/nvim-notify",
+  --   enabled = false,
+  -- },
   {
     "windwp/nvim-autopairs",
     enabled = false,
