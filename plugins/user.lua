@@ -64,10 +64,10 @@ return {
     opts = {
       mapping = { "jk", "jj", "JK", "JJ" },
     },
-    {
-      "AndrewRadev/bufferize.vim",
-      cmd = "Bufferize",
-    },
+  },
+  {
+    "AndrewRadev/bufferize.vim",
+    cmd = "Bufferize",
   },
   -- { "aerial.nvim", enabled = false },
   -- { "alpha-nvim", enabled = false },
