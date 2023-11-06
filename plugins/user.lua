@@ -69,6 +69,8 @@ return {
     "AndrewRadev/bufferize.vim",
     cmd = "Bufferize",
   },
+
+  -- -- this is to find which plugin causes the problem
   -- { "aerial.nvim", enabled = false },
   -- { "alpha-nvim", enabled = false },
   -- { "astrotheme", enabled = false },
@@ -78,11 +80,9 @@ return {
   -- { "cmp-path", enabled = false },
   -- { "cmp_luasnip", enabled = false },
   -- { "copilot.lua", enabled = false },
-
   -- { "friendly-snippets", enabled = false },
   -- { "guess-indent.nvim", enabled = false },
   -- { "heirline.nvim", enabled = false },
-
   -- { "indent-blankline.nvim", enabled = false },
   -- { "lspkind.nvim", enabled = false },
   -- { "LuaSnip", enabled = false },
