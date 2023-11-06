@@ -1,5 +1,5 @@
-local function get_copilot_node_path()
-  local copilot_node_command = os.getenv "COPILOT_NODE_PATH"
+local function get_copilot_node_command()
+  local copilot_node_command = os.getenv "COPILOT_NODE_COMMAND"
 
   if copilot_node_command == nil or copilot_node_command == "" then copilot_node_command = "node" end
 
@@ -80,7 +80,7 @@ return {
   {
     "zbirenbaum/copilot.lua",
     opts = {
-      copilot_node_command = get_copilot_node_path(),
+      copilot_node_command = get_copilot_node_command(),
     },
   },
 
