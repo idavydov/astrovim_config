@@ -1,3 +1,11 @@
+local function get_copilot_node_path()
+  local copilot_node_command = os.getenv "COPILOT_NODE_PATH"
+
+  if copilot_node_command == nil or copilot_node_command == "" then copilot_node_command = "node" end
+
+  return copilot_node_command
+end
+
 return {
   -- {
   --   "rcarriga/nvim-notify",
@@ -68,6 +76,12 @@ return {
   {
     "AndrewRadev/bufferize.vim",
     cmd = "Bufferize",
+  },
+  {
+    "zbirenbaum/copilot.lua",
+    opts = {
+      copilot_node_command = get_copilot_node_path(),
+    },
   },
 
   -- -- this is to find which plugin causes the problem
