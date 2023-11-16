@@ -34,6 +34,12 @@ return {
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
 
     ["<leader>gg"] = { "<cmd>Neogit<cr>", desc = "Neogit" },
+
+    -- Meta + arrows to resize
+    ["<M-Up>"] = { function() require("smart-splits").resize_up() end, desc = "Resize split up" },
+    ["<M-Down>"] = { function() require("smart-splits").resize_down() end, desc = "Resize split down" },
+    ["<M-Left>"] = { function() require("smart-splits").resize_left() end, desc = "Resize split left" },
+    ["<M-Right>"] = { function() require("smart-splits").resize_right() end, desc = "Resize split right" },
   },
   t = {
     -- setting a mapping to false will disable it
