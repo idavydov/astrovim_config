@@ -6,12 +6,12 @@ return {
     -- rmd
     {
       "<LocalLeader>pr",
-      '<cmd>call g:SendCmdToR(\'params <- lapply(knitr::knit_params(readLines("\' . expand("%") . \'")), function(x) x$value); class(params) <- "knit_param_list"\')<CR>',
+      '<cmd>call g:SendCmdToR(\'params <- lapply(knitr::knit_params(readLines("\' . expand("%:p") . \'")), function(x) x$value); class(params) <- "knit_param_list"\')<CR>',
       desc = "read params from the YAML header",
     },
     {
       "<LocalLeader>au",
-      "<cmd>call g:SendCmdToR('arvupload::arv_upload_report(\"' . expand(\"%\") . '\");')<CR>",
+      "<cmd>call g:SendCmdToR('arvupload::arv_upload_report(\"' . expand(\"%:p\") . '\");')<CR>",
       desc = "upload report to Arvados",
     },
     {
