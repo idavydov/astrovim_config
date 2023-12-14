@@ -52,4 +52,10 @@ return {
   i = {
     ["<C-s>"] = { "<esc>:w<cr>", desc = "Save File" },
   },
+  c = {
+    ["jj"] = { "<C-c>", desc = "Exit Command Mode" },
+    ["jk"] = { "<C-c>", desc = "Exit Command Mode" },
+    ["JJ"] = { "<C-c>", desc = "Exit Command Mode" },
+    ["JK"] = { "<C-c>", desc = "Exit Command Mode" },
+  },
 }
