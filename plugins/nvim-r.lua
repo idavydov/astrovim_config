@@ -1,6 +1,6 @@
 return {
   "jalvesaq/Nvim-R",
-  branch = "stable",
+  branch = "master",
   ft = { "r", "rmd", "rdoc", "quarto" },
   keys = {
     -- rmd

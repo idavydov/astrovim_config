@@ -81,5 +81,8 @@ return {
     --     ["~/%.config/foo/.*"] = "fooscript",
     --   },
     -- }
+
+    -- the line below enables treesitter for rmarkdown files
+    -- vim.treesitter.language.register("markdown", "rmd")
   end,
 }
