@@ -24,6 +24,13 @@ return {
       "<cmd>call b:PreviousRChunk()<CR>",
       desc = "Previous chunk",
     },
+    -- renv
+    {
+      "<LocalLeader>er",
+      "<cmd>call g:SendCmdToR('renv::load()')<CR>",
+      desc = "load renv",
+    },
+
     -- pkg dev
     {
       "<LocalLeader>pb",
