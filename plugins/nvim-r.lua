@@ -80,6 +80,11 @@ return {
       desc = "glimpse",
     },
     {
+      "<LocalLeader>it",
+      "<cmd>call RAction('(\\(x) t(x[1,]))')<CR>",
+      desc = "t(x[1,])",
+    },
+    {
       "<LocalLeader>ic",
       "<cmd>call RAction('dplyr::count', ', ' . input('column(s)?'))<CR>",
       desc = "count",
