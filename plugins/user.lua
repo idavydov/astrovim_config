@@ -7,10 +7,6 @@ local function get_copilot_node_command()
 end
 
 return {
-  -- {
-  --   "rcarriga/nvim-notify",
-  --   enabled = false,
-  -- },
   {
     "windwp/nvim-autopairs",
     enabled = false,
