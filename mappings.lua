@@ -40,6 +40,10 @@ return {
     ["<M-Down>"] = { function() require("smart-splits").resize_down() end, desc = "Resize split down" },
     ["<M-Left>"] = { function() require("smart-splits").resize_left() end, desc = "Resize split left" },
     ["<M-Right>"] = { function() require("smart-splits").resize_right() end, desc = "Resize split right" },
+
+    -- quickly navigate quickfix
+    ["]q"] = { "<cmd>cnext<cr>", desc = "Next quickfix" },
+    ["[q"] = { "<cmd>cprev<cr>", desc = "Previous quickfix" },
   },
   t = {
     -- setting a mapping to false will disable it
