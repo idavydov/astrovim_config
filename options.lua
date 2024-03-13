@@ -24,6 +24,7 @@ return {
     icons_enabled = true, -- disable icons in the UI (disable if no nerd font is available, requires :PackerSync after changing)
     ui_notifications_enabled = true, -- disable notifications when toggling UI elements
     resession_enabled = false, -- enable experimental resession.nvim session management (will be default in AstroNvim v4)
+    voom_ft_modes = { rmd = "pandoc", rnoweb = "latex" }, -- set ft modes for voom (see https://github.com/jalvesaq/Nvim-R/blob/master/doc/Nvim-R.txt#L273 )
   },
 }
 -- If you need more control, you can use the function()...end notation

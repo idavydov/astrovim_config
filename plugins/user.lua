@@ -83,6 +83,10 @@ return {
       copilot_node_command = get_copilot_node_command(),
     },
   },
+  {
+    "vim-voom/VOoM",
+    ft = { "rmd" },
+  },
 
   -- -- this is to find which plugin causes the problem
   -- { "aerial.nvim", enabled = false },
