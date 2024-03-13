@@ -48,11 +48,15 @@ return {
   {
     "NeogitOrg/neogit",
     dependencies = {
-      { "nvim-lua/plenary.nvim" },
+      "nvim-lua/plenary.nvim",
+      "sindrets/diffview.nvim",
+      "nvim-telescope/telescope.nvim",
     },
     event = "User AstroGitFile",
     cmd = "Neogit",
-    config = true,
+    opts = {
+      auto_show_console = false,
+    },
   },
   {
     "akinsho/toggleterm.nvim",
@@ -77,6 +81,9 @@ return {
     "zbirenbaum/copilot.lua",
     opts = {
       copilot_node_command = get_copilot_node_command(),
+      filetypes = {
+        yaml = true,
+      },
     },
   },
   {
