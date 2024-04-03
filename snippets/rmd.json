@@ -1,0 +1,11 @@
+{
+  "reproducibility section": {
+    "prefix": "repro",
+    "body": [
+      "```{r, results=\"asis\", echo=FALSE}",
+      "reporting::print_reproducibility_section(params)",
+      "```"
+    ],
+    "description": "Reproducibility section"
+  }
+}
