@@ -49,77 +49,77 @@ return {
       },
       {
         "<LocalLeader>au",
-        "<cmd>call g:SendCmdToR('arvupload::arv_upload_report(\"' . expand(\"%:p\") . '\");')<CR>",
+        "<cmd>lua require('r.send').cmd('arvupload::arv_upload_report(\"' .. vim.fn.expand(\"%:p\") .. '\");')<CR>",
         desc = "upload report to Arvados",
       },
       {
         "]c",
-        "<cmd>call b:NextRChunk()<CR>",
+        "<cmd>lua require('r.rmd').next_chunk()<CR>",
         desc = "Next chunk",
       },
       {
         "[c",
-        "<cmd>call b:PreviousRChunk()<CR>",
+        "<cmd>lua require('r.rmd').previous_chunk()<CR>",
         desc = "Previous chunk",
       },
       -- renv
       {
         "<LocalLeader>er",
-        "<cmd>call g:SendCmdToR('renv::load()')<CR>",
+        "<cmd>lua require('r.send').cmd('renv::load()')<CR>",
         desc = "load renv",
       },
 
       -- pkg dev
       {
         "<LocalLeader>pb",
-        "<cmd>call g:SendCmdToR('pkgdown::build_site()')<CR>",
+        "<cmd>lua require('r.send').cmd('pkgdown::build_site()')<CR>",
         desc = "pkgdown build site",
       },
       {
         "<LocalLeader>el",
-        "<cmd>call g:SendCmdToR('devtools::load_all()')<CR>",
+        "<cmd>lua require('r.send').cmd('devtools::build_all()')<CR>",
         desc = "devtools load all",
       },
       {
         "<LocalLeader>ed",
-        "<cmd>call g:SendCmdToR('devtools::document()')<CR>",
+        "<cmd>lua require('r.send').cmd('devtools::document()')<CR>",
         desc = "devtools document",
       },
       {
         "<LocalLeader>ei",
-        "<cmd>call g:SendCmdToR('devtools::install()')<CR>",
+        "<cmd>lua require('r.send').cmd('devtools::install()')<CR>",
         desc = "devtools install",
       },
       -- object properties
       {
         "<LocalLeader>in",
-        "<cmd>call RAction('length')<CR>",
+        "<cmd>lua require('r.run').action('length')<CR>",
         desc = "length",
       },
       {
         "<LocalLeader>il",
-        "<cmd>call RAction('levels')<CR>",
+        "<cmd>lua require('r.run').action('levels')<CR>",
         desc = "levels",
       },
       {
         "<LocalLeader>iu",
-        "<cmd>call RAction('unique')<CR>",
+        "<cmd>lua require('r.run').action('unique')<CR>",
         desc = "unique",
       },
       -- data.frame's
       {
         "<LocalLeader>ir",
-        "<cmd>call RAction('nrow')<CR>",
+        "<cmd>lua require('r.run').action('nrow')<CR>",
         desc = "nrow",
       },
       {
         "<LocalLeader>ig",
-        "<cmd>call RAction('dplyr::glimpse')<CR>",
+        "<cmd>lua require('r.run').action('glimpse')<CR>",
         desc = "glimpse",
       },
       {
         "<LocalLeader>it",
-        "<cmd>call RAction('(\\(x) t(x[1,]))')<CR>",
+        "<cmd>lua require('r.run').action('(\\(x) t(x[1,]))')<CR>",
         desc = "t(x[1,])",
       },
       {
