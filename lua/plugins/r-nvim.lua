@@ -44,7 +44,7 @@ return {
       -- rmd
       {
         "<LocalLeader>pr",
-        "<cmd>lua require('r.send').action('params <- lapply(knitr::knit_params(readLines(\"' . expand(\"%:p\") . '\")), function(x) x$value); class(params) <- \"knit_param_list\"')<CR>",
+        "<cmd>lua require('r.send').cmd('params <- lapply(knitr::knit_params(readLines(\"' .. vim.fn.expand(\"%:p\") .. '\")), function(x) x$value); class(params) <- \"knit_param_list\"')<CR>",
         desc = "read params from the YAML header",
       },
       {
