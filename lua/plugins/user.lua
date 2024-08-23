@@ -24,9 +24,7 @@ return {
           },
           mappings = {
             n = {
-              ["jj"] = "close",
               ["jk"] = "close",
-              ["JJ"] = "close",
               ["JK"] = "close",
             },
           },
@@ -71,7 +69,49 @@ return {
   {
     "max397574/better-escape.nvim",
     opts = {
-      mapping = { "jk", "jj", "JK", "JJ" },
+      default_mappings = false,
+      mappings = {
+        i = {
+          j = {
+            k = "<Esc>",
+          },
+          J = {
+            K = "<Esc>",
+          },
+        },
+        c = {
+          j = {
+            k = "<Esc>",
+          },
+          J = {
+            K = "<Esc>",
+          },
+        },
+        t = {
+          j = {
+            k = "<C-\\><C-n>",
+          },
+          J = {
+            K = "<C-\\><C-n>",
+          },
+        },
+        v = {
+          j = {
+            k = "<Esc>",
+          },
+          J = {
+            K = "<Esc>",
+          },
+        },
+        s = {
+          j = {
+            k = "<Esc>",
+          },
+          J = {
+            K = "<Esc>",
+          },
+        },
+      },
     },
   },
   {
@@ -80,7 +120,7 @@ return {
   },
   {
     "zbirenbaum/copilot.lua",
-    enabled = false,
+    enabled = true,
     opts = {
       copilot_node_command = get_copilot_node_command(),
       filetypes = {
