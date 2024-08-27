@@ -145,6 +145,40 @@ return {
         ]],
         desc = "send paragraph and view result",
       },
+
+      -- browse files
+      {
+        "<LocalLeader>b5",
+        "<cmd>lua require('r.send').cmd('servr::httd(port=9905)')<CR>",
+        desc = "file browser:9905",
+      },
+      {
+        "<LocalLeader>b6",
+        "<cmd>lua require('r.send').cmd('servr::httd(port=9906)')<CR>",
+        desc = "file browser:9906",
+      },
+      {
+        "<LocalLeader>b7",
+        "<cmd>lua require('r.send').cmd('servr::httd(port=9907)')<CR>",
+        desc = "file browser:9907",
+      },
+
+      -- graphic device
+      {
+        "<LocalLeader>g0",
+        "<cmd>lua require('r.send').cmd('httpgd::hgd(port=9900)')<CR>",
+        desc = "httpgd:9900",
+      },
+      {
+        "<LocalLeader>g1",
+        "<cmd>lua require('r.send').cmd('httpgd::hgd(port=9901)')<CR>",
+        desc = "httpgd:9901",
+      },
+      {
+        "<LocalLeader>g2",
+        "<cmd>lua require('r.send').cmd('httpgd::hgd(port=9902)')<CR>",
+        desc = "httpgd:9902",
+      },
     },
     init = function()
       vim.g.R_assign = 1
