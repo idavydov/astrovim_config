@@ -52,8 +52,8 @@ return {
   {
     "akinsho/toggleterm.nvim",
     opts = {
-      on_open = function(term) vim.api.nvim_del_keymap("t", "<C-j>") end,
-      on_close = function(term)
+      on_open = function() vim.api.nvim_del_keymap("t", "<C-j>") end,
+      on_close = function()
         vim.api.nvim_set_keymap("t", "<C-j>", "<Cmd>wincmd j<CR>", { desc = "Terminal down window navigation" })
       end,
     },
