@@ -1,11 +1,3 @@
-local function get_copilot_node_command()
-  local copilot_node_command = os.getenv "COPILOT_NODE_COMMAND"
-
-  if copilot_node_command == nil or copilot_node_command == "" then copilot_node_command = "node" end
-
-  return copilot_node_command
-end
-
 ---@type LazySpec
 return {
   {
@@ -117,16 +109,6 @@ return {
   {
     "AndrewRadev/bufferize.vim",
     cmd = "Bufferize",
-  },
-  {
-    "zbirenbaum/copilot.lua",
-    enabled = true,
-    opts = {
-      copilot_node_command = get_copilot_node_command(),
-      filetypes = {
-        yaml = true,
-      },
-    },
   },
   {
     "vim-voom/VOoM",
