@@ -213,18 +213,19 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
-    config = function()
-      require("nvim-treesitter.configs").setup {
-        ensure_installed = { "markdown", "markdown_inline", "r", "rnoweb" },
-      }
+    opts = function(_, opts)
+      vim.list_extend(opts.ensure_installed, { "markdown", "markdown_inline", "r", "rnoweb", "yaml" })
+      opts.highlight.enable = true
     end,
   },
   "R-nvim/cmp-r",
   {
     "hrsh7th/nvim-cmp",
-    config = function()
-      require("cmp").setup { sources = { { name = "cmp_r" } } }
-      require("cmp_r").setup {}
+    opts = function(_, opts)
+      local cmp = require "cmp"
+      opts.sources = cmp.config.sources {
+        { name = "cmp_r", priority = 700 },
+      }
     end,
   },
 }
