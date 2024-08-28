@@ -119,22 +119,22 @@ return {
       },
       {
         "<LocalLeader>it",
-        "<cmd>lua require('r.run').action('(\\(x) t(x[1,]))')<CR>",
+        "<cmd>lua require('r.run').action('(\\\\(x) t(x[1,]))')<CR>",
         desc = "t(x[1,])",
       },
       {
         "<LocalLeader>ic",
-        "<cmd>call RAction('dplyr::count', ', ' . input('column(s)?'))<CR>",
+        "<cmd>lua require('r.run').action('dplyr::count', 'n',  ', ' .. vim.fn.input('column(s)?'))<CR>",
         desc = "count",
       },
       {
         "<LocalLeader>id",
-        "<cmd>call RAction('dplyr::distinct', ', ' . input('column(s)?'))<CR>",
+        "<cmd>lua require('r.run').action('dplyr::distinct', 'n', ', ' .. vim.fn.input('column(s)?'))<CR>",
         desc = "distinct",
       },
       {
         "<LocalLeader>ip",
-        "<cmd>call RAction('dplyr::pull', ', ' . input('column?'))<CR>",
+        "<cmd>lua require('r.run').action('dplyr::pull', 'n', ', ' .. vim.fn.input('column?'))<CR>",
         desc = "pull",
       },
       {
@@ -148,36 +148,16 @@ return {
 
       -- browse files
       {
-        "<LocalLeader>b5",
-        "<cmd>lua require('r.send').cmd('servr::httd(port=9905)')<CR>",
-        desc = "file browser:9905",
-      },
-      {
-        "<LocalLeader>b6",
-        "<cmd>lua require('r.send').cmd('servr::httd(port=9906)')<CR>",
-        desc = "file browser:9906",
-      },
-      {
-        "<LocalLeader>b7",
-        "<cmd>lua require('r.send').cmd('servr::httd(port=9907)')<CR>",
-        desc = "file browser:9907",
+        "<LocalLeader>br",
+        "<cmd>lua require('r.send').cmd('servr::httd(port=.free_port())')<CR>",
+        desc = "file browser",
       },
 
       -- graphic device
       {
-        "<LocalLeader>g0",
-        "<cmd>lua require('r.send').cmd('httpgd::hgd(port=9900)')<CR>",
+        "<LocalLeader>gd",
+        "<cmd>lua require('r.send').cmd('httpgd::hgd(port=.free_port())')<CR>",
         desc = "httpgd:9900",
-      },
-      {
-        "<LocalLeader>g1",
-        "<cmd>lua require('r.send').cmd('httpgd::hgd(port=9901)')<CR>",
-        desc = "httpgd:9901",
-      },
-      {
-        "<LocalLeader>g2",
-        "<cmd>lua require('r.send').cmd('httpgd::hgd(port=9902)')<CR>",
-        desc = "httpgd:9902",
       },
     },
     init = function()
