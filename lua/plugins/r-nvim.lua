@@ -25,10 +25,9 @@ return {
         min_editor_width = 72,
         rconsole_width = 78,
         disable_cmds = {
-          "RClearConsole",
           "RCustomStart",
-          "RSPlot",
           "RSaveClose",
+          "RPackages",
         },
       }
       -- Check if the environment variable "R_AUTO_START" exists.
