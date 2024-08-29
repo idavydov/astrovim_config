@@ -150,7 +150,7 @@ return {
       {
         "<LocalLeader>gd",
         "<cmd>lua require('r.send').cmd('httpgd::hgd(port=.free_port())')<CR>",
-        desc = "httpgd:9900",
+        desc = "httpgd",
       },
     },
     init = function()
