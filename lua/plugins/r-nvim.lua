@@ -10,7 +10,7 @@ return {
         open_html = "no",
         open_pdf = "no",
         pdfviewer = "",
-        csv_app = ':lua require("astronvim.utils").toggle_term_cmd("vd --theme=light %s")',
+        csv_app = "tmux new-window vd --theme=light",
 
         R_args = { "--quiet", "--no-save", "--no-restore" },
         hook = {
