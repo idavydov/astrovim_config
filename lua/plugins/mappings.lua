@@ -8,7 +8,7 @@ return {
         n = {
           -- second key is the lefthand side of the map
           -- mappings seen under group name "Buffer"
-          ["<Leader>vc"] = { "<cmd>w !diff % -<cr>", desc = "buffer changes" },
+          ["<Leader>vc"] = { "<cmd>w !diff % -<cr>", desc = "view buffer changes" },
         },
       },
     },

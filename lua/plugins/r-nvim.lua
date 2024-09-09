@@ -1,6 +1,7 @@
 return {
   {
     "R-nvim/R.nvim",
+    branch = "format_file",
     lazy = false,
     config = function() -- Create a table with the options to be passed to setup()
       local opts = {
