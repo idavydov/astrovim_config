@@ -1,14 +1,14 @@
 return {
   {
     "R-nvim/R.nvim",
-    branch = "format_file",
+    branch = "main",
     lazy = false,
     config = function() -- Create a table with the options to be passed to setup()
       local opts = {
 
         nvimpager = "tab",
         close_term = false,
-        open_html = "no",
+        open_html = "open",
         open_pdf = "no",
         pdfviewer = "",
         csv_app = "tmux new-window vd --theme=light",
@@ -159,7 +159,6 @@ return {
       vim.g.R_nvimpager = "tab"
       vim.g.R_assign_map = "<M-->"
       vim.g.R_close_term = 1
-      vim.g.R_openhtml = 0
       vim.g.R_args = { "--quiet", "--no-save", "--no-restore" }
       vim.g.R_csv_app = ':lua require("astronvim.utils").toggle_term_cmd("vd --theme=light %s")'
 
