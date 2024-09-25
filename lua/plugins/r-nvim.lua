@@ -12,7 +12,7 @@ return {
         open_pdf = "no",
         pdfviewer = "",
         csv_app = "tmux new-window vd --theme=light",
-
+        quarto_preview_args = ", port=.free_port()",
         R_args = { "--quiet", "--no-save", "--no-restore" },
         hook = {
           on_filetype = function()
@@ -150,7 +150,7 @@ return {
       -- graphic device
       {
         "<LocalLeader>gd",
-        "<cmd>lua require('r.send').cmd('httpgd::hgd(port=.free_port())')<CR>",
+        "<cmd>lua require('r.send').cmd('tryCatch(httpgd::hgd_browse(),error=function(e) {httpgd::hgd(port=.free_port());httpgd::hgd_browse()})')<CR>",
         desc = "httpgd",
       },
     },
