@@ -15,6 +15,7 @@ return {
           open_app = "tmux new-window vd --theme=light",
         },
         quarto_preview_args = ", port=.free_port()",
+        rmdchunk = 0,
         R_args = { "--quiet", "--no-save", "--no-restore" },
         hook = {
           on_filetype = function()
