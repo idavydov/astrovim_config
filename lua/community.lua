@@ -6,8 +6,6 @@
 return {
   "AstroNvim/astrocommunity",
 
-  -- { import = "astrocommunity.completion.copilot-lua-cmp" },
   { import = "astrocommunity.editing-support.rainbow-delimiters-nvim" },
   { import = "astrocommunity.colorscheme.tokyonight-nvim" },
-  { import = "astrocommunity.completion.copilot-lua-cmp" },
 }
