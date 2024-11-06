@@ -1,0 +1,38 @@
+{
+  "YAML Header": {
+      "prefix": "---",
+      "body": [
+          "---",
+          "title: ${1:title}",
+          "date: today",
+          "format: ${4:html}",
+          "---"
+      ]
+  },
+  "Insert Block Chunck": {
+      "prefix": "```",
+      "body": ["```{r}", "${1}", "```"]
+  },
+  "Insert Inline Chunck": {
+      "prefix": "`",
+      "body": "`r ${0}`"
+  },
+  "Insert Code Language": {
+      "prefix": "```",
+      "body": ["```{${1:lang}}", "${0}", "```"]
+  },
+  "Insert Block Equation": {
+      "prefix": "$$",
+      "body": ["\\$$", "${0}", "\\$$"]
+  },
+  "reproducibility section": {
+    "prefix": "repro",
+    "body": [
+      "```{r, results=\"asis\", echo=FALSE}",
+      "reporting::print_reproducibility_section(params)",
+      "```"
+    ],
+    "description": "Reproducibility section"
+  }
+}
+
