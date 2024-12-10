@@ -135,13 +135,17 @@ return {
         "<cmd>lua require('r.run').action('dplyr::pull', 'n', ', ' .. vim.fn.input('column?'))<CR>",
         desc = "pull",
       },
+
+      -- print assignent
       {
         "<LocalLeader>pv",
-        [[
-        <cmd>call SendParagraphToR('silent', 'stay')<CR>
-        <cmd>call g:SendCmdToR('nvimcom:::nvim_viewobj(.Last.value$value)')<CR>
-        ]],
+        "<cmd>lua require('r.send').paragraph(false)<CR>" .. "<cmd>lua require('r.send').cmd('print(.Last.value)')<CR>",
         desc = "send paragraph and view result",
+      },
+      {
+        "<S-CR>",
+        "<cmd>lua require('r.send').line(false)<CR>" .. "<cmd>lua require('r.send').cmd('print(.Last.value)')<CR>",
+        desc = "send line and view result",
       },
 
       -- browse files
