@@ -11,7 +11,9 @@ return {
         open_html = "open",
         open_pdf = "no",
         pdfviewer = "",
-        csv_app = "tmux new-window vd --theme=light",
+        view_df = {
+          open_app = "tmux new-window vd --theme=light",
+        },
         quarto_preview_args = ", port=.free_port()",
         R_args = { "--quiet", "--no-save", "--no-restore" },
         hook = {
