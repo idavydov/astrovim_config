@@ -199,14 +199,4 @@ return {
       opts.highlight.enable = true
     end,
   },
-  "R-nvim/cmp-r",
-  {
-    "hrsh7th/nvim-cmp",
-    opts = function(_, opts)
-      local cmp = require "cmp"
-      opts.sources = cmp.config.sources {
-        { name = "cmp_r", priority = 700 },
-      }
-    end,
-  },
 }
