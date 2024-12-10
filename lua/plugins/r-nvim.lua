@@ -12,8 +12,9 @@ return {
         open_pdf = "no",
         pdfviewer = "",
         view_df = {
-          open_app = "tmux new-window vd --theme=light",
+          open_app = "tmux new-window vd --themee=light",
         },
+        -- set_params = "no",
         quarto_preview_args = ", port=.free_port()",
         rmdchunk = 0,
         R_args = { "--quiet", "--no-save", "--no-restore" },
