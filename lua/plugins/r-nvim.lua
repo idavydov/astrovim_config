@@ -13,6 +13,7 @@ return {
         pdfviewer = "",
         view_df = {
           open_app = "tmux new-window vd --themee=light",
+          n_lines = 10000000,
         },
         -- set_params = "no",
         quarto_preview_args = ", port=.free_port()",
