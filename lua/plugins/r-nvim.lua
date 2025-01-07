@@ -205,4 +205,14 @@ return {
       opts.highlight.enable = true
     end,
   },
+  {
+    "R-nvim/cmp-r",
+    opts = {
+      filetypes = { "r", "rmd", "quarto" },
+    },
+  },
+  {
+    "hrsh7th/nvim-cmp",
+    opts = function(_, opts) table.insert(opts.sources, { name = "cmp_r" }) end,
+  },
 }

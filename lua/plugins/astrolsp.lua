@@ -46,6 +46,11 @@ return {
     ---@diagnostic disable: missing-fields
     config = {
       -- clangd = { capabilities = { offsetEncoding = "utf-8" } },
+      r_language_server = {
+        cmd = { "R", "--no-echo", "-e", "languageserver::run()" },
+        filetypes = { "r", "rmd", "quarto" },
+        log_level = 2,
+      },
     },
     -- customize how language servers are attached
     handlers = {
