@@ -61,6 +61,11 @@ return {
         "<cmd>lua require('r.rmd').previous_chunk()<CR>",
         desc = "Previous chunk",
       },
+      {
+        "<LocalLeader>ci",
+        "o```{r}\n```<Esc>ko",
+        desc = "Insert chunk",
+      },
       -- renv
       {
         "<LocalLeader>er",
