@@ -17,7 +17,7 @@ return {
         open_pdf = "no",
         pdfviewer = "",
         view_df = {
-          open_app = "tmux new-window vd --themee=light",
+          open_app = "tmux new-window vd --theme=light",
           n_lines = 10000000,
         },
         -- set_params = "no",
