@@ -22,7 +22,7 @@ return {
         },
         -- set_params = "no",
         quarto_preview_args = ", port=.free_port()",
-        rmdchunk = 0,
+        rmdchunk = "",
         R_args = { "--quiet", "--no-save", "--no-restore" },
         hook = {
           on_filetype = function()
