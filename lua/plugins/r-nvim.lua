@@ -162,7 +162,7 @@ return {
       -- browse files
       {
         "<LocalLeader>br",
-        "<cmd>lua require('r.send').cmd('servr::httd(port=.free_port())')<CR>",
+        "<cmd>lua require('r.send').cmd('browseURL(\".\")')<CR>",
         desc = "file browser",
       },
 
