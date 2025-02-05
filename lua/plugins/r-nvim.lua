@@ -33,8 +33,8 @@ return {
             vim.api.nvim_buf_set_keymap(0, "v", "<Enter>", "<Plug>RSendSelection", {})
           end,
         },
-        min_editor_width = 72,
-        rconsole_width = 78,
+        min_editor_width = 80,
+        rconsole_width = 60,
         disable_cmds = {
           "RCustomStart",
           "RSaveClose",
