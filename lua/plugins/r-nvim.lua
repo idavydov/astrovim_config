@@ -165,6 +165,11 @@ return {
         "<cmd>lua require('r.send').cmd('browseURL(\".\")')<CR>",
         desc = "file browser",
       },
+      {
+        "<LocalLeader>kv",
+        "<cmd>lua require('r.send').cmd('browseURL(\"' .. vim.fn.expand(\"%:p:r\") .. \".html\" .. '\");')<CR>",
+        desc = "view current report",
+      },
 
       -- graphic device
       {
