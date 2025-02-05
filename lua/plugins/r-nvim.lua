@@ -2,6 +2,11 @@ return {
   {
     "R-nvim/R.nvim",
     branch = "main",
+    --- or set commit
+    -- commit = "49c356bc17af7a91525d94a5f948456e70687a6e",
+    --- or local directory
+    -- dir = "/home/davydovi/myR/R.nvim",
+    -- name = "R.nvim",
     lazy = false,
     config = function() -- Create a table with the options to be passed to setup()
       local opts = {
