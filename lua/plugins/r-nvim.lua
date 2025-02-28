@@ -39,6 +39,7 @@ return {
           "RCustomStart",
           "RSaveClose",
           "RPackages",
+          "RSendChunkFH",
         },
       }
       if vim.env.R_AUTO_START == "1" then opts.auto_start = "on startup" end
@@ -70,6 +71,18 @@ return {
         "<LocalLeader>ci",
         "o```{r}\n```<Esc>ko",
         desc = "Insert chunk",
+      },
+      {
+        "<LocalLeader>ch",
+        function()
+          local rsend = require "r.send"
+          rsend.cmd '.disable_browser<-getOption(".disable_browser")'
+          rsend.cmd "options(.disable_browser=TRUE)"
+          rsend.chunks_up_to_here()
+          rsend.cmd "options(.disable_browser=.disable_browser)"
+          rsend.cmd "rm(.disable_browser)"
+        end,
+        desc = "Evaluate chunks up to here (browser disabled)",
       },
       -- renv
       {
