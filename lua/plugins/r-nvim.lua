@@ -34,7 +34,7 @@ return {
           end,
         },
         min_editor_width = 80,
-        rconsole_width = 60,
+        rconsole_width = 70,
         disable_cmds = {
           "RCustomStart",
           "RSaveClose",
