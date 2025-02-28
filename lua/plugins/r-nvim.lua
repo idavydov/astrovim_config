@@ -115,11 +115,16 @@ return {
       -- object properties
       {
         "<LocalLeader>in",
+        "<cmd>lua require('r.run').action('names')<CR>",
+        desc = "names",
+      },
+      {
+        "<LocalLeader>il",
         "<cmd>lua require('r.run').action('length')<CR>",
         desc = "length",
       },
       {
-        "<LocalLeader>il",
+        "<LocalLeader>iv",
         "<cmd>lua require('r.run').action('levels')<CR>",
         desc = "levels",
       },
