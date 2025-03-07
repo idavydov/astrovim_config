@@ -22,7 +22,6 @@ return {
         },
         -- set_params = "no",
         quarto_preview_args = ", port=.free_port()",
-        rmdchunk = "",
         R_args = { "--quiet", "--no-save", "--no-restore" },
         hook = {
           on_filetype = function()
@@ -204,7 +203,6 @@ return {
       vim.g.R_args = { "--quiet", "--no-save", "--no-restore" }
       vim.g.R_csv_app = ':lua require("astronvim.utils").toggle_term_cmd("vd --theme=light %s")'
 
-      vim.g.r_indent_align_args = 0
       -- vim.g.rout_follow_colorscheme = 1
       vim.g.rout_color_input = "guifg=#7890dd"
       vim.g.rout_color_normal = "guifg=#2e7de9"
